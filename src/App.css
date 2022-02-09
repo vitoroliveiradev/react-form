@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #afb6d9;background-image: linear-gradient(0deg, #afb4d9 0%, #97D9E1 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 25px;
+}
+
+form img {
+    max-width: 250px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+}
+
+form span {
+    animation: showSpan 1s;
+    color: rgb(252, 44, 44);
+    position: absolute;
+    margin-top: 50px;
+    font-size: 14px;
+
+    transition: all 1s linear;
+}
+
+@keyframes showSpan {
+    from {
+        transform: translateX(400px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+form input {
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #006571;
+    height: 25px;
+    width: 300px;
+    outline: none;
+    background-color: transparent;
+
+    transition: all .3s linear; 
+}
+
+form input:active {
+    border-bottom: 2px solid #002e34;
+}
+
+form button {
+    width: 300px;
+    height: 40px;
+    background-color: #4ad8e8;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+
+    transition: all .5s ease;
+}
+
+form button:hover {
+    background-color: #0093E9;
+}
+
+@media screen and (max-width: 340px) {
+    form {
+        width: 100%
+    }
+}
